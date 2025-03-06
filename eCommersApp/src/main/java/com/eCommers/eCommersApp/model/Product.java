@@ -19,6 +19,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.LastModifiedBy;
 
 @Data
 @Entity
@@ -57,6 +59,8 @@ public class Product {
     @NotBlank(message = "Product category_name is Mandatory")
     @Column(name = "category_name")
     private String category;
+
+
 
 
     @JsonIgnore
